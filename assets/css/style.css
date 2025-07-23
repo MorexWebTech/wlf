@@ -1,0 +1,15 @@
+@import url('bootstrap.min.css');
+@import url('booststrap-grid.css');
+
+/* Background color */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #010101;
+}
+.bg-dark-brown {
+    background-color: #170d0c; /* You can change this to any dark brown hex */
+    color: #fff; /* Optional: make text white */
+  }
