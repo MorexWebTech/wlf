@@ -1,15 +1,88 @@
+/* Import Bootstrap first */
 @import url('bootstrap.min.css');
-@import url('booststrap-grid.css');
+@import url('bootstrap-grid.css'); /* Fixed typo: 'booststrap-grid.css' → 'bootstrap-grid.css' */
 
-/* Background color */
-*{
-    padding: 0;
-    margin: 0;
+/*------------------------------------
+  Root Variables (Color Palette)
+------------------------------------*/
+:root {
+  /* Brand Colors */
+  --dark-brown: #0d0707;
+  --dark-brown-nav: #221212;
+  --primary-color: #2C3E50;
+  --secondary-color: #18BC9C;
+  --accent-color: #F39C12;
+
+  /* Text Colors */
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --text-gray: #7f8c8d;
+
+  /* Backgrounds */
+  --bg-light: #f4f4f4;
+  --bg-dark: var(--dark-brown);
 }
-body{
-    background-color: #010101;
+
+/*------------------------------------
+  Reset and Base Styles
+------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/*------------------------------------
+  Custom Utilities
+------------------------------------*/
 .bg-dark-brown {
-    background-color: #170d0c; /* You can change this to any dark brown hex */
-    color: #fff; /* Optional: make text white */
+  background-color: var(--dark-brown-nav) !important;
+  color: var(--text-light) !important;
+}
+
+.text-white {
+  color: var(--text-light) !important;
+}
+
+.text-dark {
+  color: var(--text-dark) !important;
+}
+
+
+.navbar-nav .nav-link {
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+}
+
+/*------------------------------------
+  Button Styling
+------------------------------------*/
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/*------------------------------------
+  Responsive Helper (Optional)
+------------------------------------*/
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin-left: auto;
   }
+}
