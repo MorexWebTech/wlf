@@ -86,3 +86,18 @@ body {
     margin-left: auto;
   }
 }
+
+.svg-bg {
+  background: linear-gradient(
+    to top,
+    rgb(219, 135, 0) 0%,
+    rgb(255, 215, 162) 40%,
+    rgb(255, 255, 255) 100%
+  );
+  
+  -webkit-mask: url('../image/logo.1adc9ebd.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('../image/logo.1adc9ebd.svg') no-repeat center;
+  mask-size: contain;
+  background-repeat: no-repeat;
+}
